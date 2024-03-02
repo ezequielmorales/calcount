@@ -1,0 +1,187 @@
+/* UNIVERSAL RESET*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+:root {
+  --primary-color: #ffc107;
+  --input-background: rgba(255, 255, 255, 0.6);
+
+  --section-background: rgba(0, 0, 0, 0.27);
+  --section-backdrop-filter: blur(8px);
+  --section-border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+html {
+  height: 100vh;
+}
+
+.form-control,
+.form-select,
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--input-background);
+
+  margin-bottom: 16px;
+}
+
+#signUp,
+#logIn,
+#dashboard div>section {
+  color: white;
+}
+
+/* BACKGROUND */
+body {
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* LOGIN, SIGNUP */
+#signUp,
+#logIn {
+  height: 100vh;
+}
+
+#signUp,
+#logIn,
+#dashboard div>section,
+#notFound article {
+  background-color: var(--section-background);
+  backdrop-filter: var(--section-backdrop-filter);
+}
+
+#logo {
+  padding: 40px 70px 0 70px;
+}
+
+#signUp form input[type=button],
+#logIn form input[type=button] {
+  margin-top: 30px;
+}
+
+#logIn p,
+#signUp p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#logIn p a,
+#signUp p a {
+  color: rgba(255, 255, 255, 0.9);
+
+  font-weight: 500;
+}
+
+#logIn p a:hover,
+#signUp p a:hover {
+  text-decoration: underline !important;
+}
+
+
+/* DASHBOARD */
+#dashboard>div:not(:first-child) {
+  min-height: 40vh;
+}
+
+#dashboard div>section {
+  height: 100%;
+
+  border: var(--section-border);
+}
+
+#dashboard #dashboardHeaderLogo img {
+  width: 230px;
+}
+
+#dashboard #dashboardLogOut input[type="button"] {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Intake List */
+#dashboard #filteredList #intakeList {
+  height: 230px;
+
+  overflow: auto;
+}
+
+#dashboard #filteredList #intakeList table {
+  width: 95%;
+}
+
+#dashboard #filteredList #intakeList table tbody tr {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+#dashboard #filteredList #intakeList table tbody tr td {
+  padding: 5px;
+}
+
+#dashboard #filteredList #intakeList table tbody tr td:nth-child(2) {
+  font-weight: 500;
+}
+
+#dashboard #filteredList #intakeList table tbody tr td:nth-of-type(1) img {
+  filter: invert(100%);
+}
+
+#dashboard #filteredList #intakeList table tbody tr td:nth-of-type(5) img {
+  width: 24px;
+
+  cursor: pointer;
+}
+
+/* Calorie Counter */
+#dashboard #caloriesCounter article h2 {
+  font-size: 1.4rem;
+
+  color: var(--primary-color);
+}
+
+#dashboard #caloriesCounter h3 {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+#dashboard #caloriesCounter h3 span {
+  font-size: 1.3rem;
+}
+
+.calRed {
+  background: linear-gradient(90deg, transparent 10%, rgba(220, 0, 0, 0.6) 50%, transparent 90%);
+}
+
+.calYellow {
+  background: linear-gradient(90deg, transparent 10%, rgba(185, 185, 0, 0.5) 50%, transparent 90%);
+}
+
+.calGreen {
+  background: linear-gradient(90deg, transparent 10%, rgba(0, 126, 0, 0.6) 50%, transparent 90%);
+}
+
+/* Macronutrients Graph */
+#macronutrientsGraph section {
+  max-height: 40vh;
+}
+
+
+/* NOT FOUND */
+#notFound {
+  height: 100vh;
+}
+
+#notFound article h2 {
+  color: var(--primary-color);
+  font-size: 2.7rem;
+}
+
+#notFound article p {
+  color: white;
+}
